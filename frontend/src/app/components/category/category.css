@@ -1,0 +1,204 @@
+/* ===========================
+   General Page Styles
+=========================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* ===========================
+   Form Container
+=========================== */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Inputs & Select */
+input[type="text"],
+select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+}
+
+/* Submit Button */
+button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #10b981;
+  color: #fff;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #059669;
+}
+
+/* ===========================
+   List Container
+=========================== */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+li {
+  background: #ffffff;
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   Edit & Delete Buttons
+=========================== */
+li button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+li button.edit {
+  background: #f59e0b;
+  color: #fff;
+}
+
+li button.edit:hover {
+  background: #d97706;
+}
+
+li button.delete {
+  background: #ef4444;
+  color: #fff;
+}
+
+li button.delete:hover {
+  background: #b91c1c;
+}
+
+/* ===========================
+   See Products Button
+=========================== */
+.see-products {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-products button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.see-products button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ===========================
+   Pagination
+=========================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.pagination button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #3b82f6;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.pagination span {
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* ===========================
+   Responsive Styles
+=========================== */
+@media (max-width: 640px) {
+  form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input[type="text"], select {
+    width: 100%;
+  }
+
+  ul {
+    max-width: 90%;
+  }
+}

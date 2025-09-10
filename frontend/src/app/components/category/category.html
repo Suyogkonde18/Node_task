@@ -1,0 +1,18 @@
+<h2>Categories</h2>
+
+<form (ngSubmit)="saveCategory()">
+  <input type="text" [(ngModel)]="categoryName" name="categoryName" placeholder="Category Name" required>
+  <button type="submit">{{ editId ? 'Update' : 'Add' }} Category</button>
+</form>
+
+<ul>
+  <li *ngFor="let cat of categories">
+    {{ cat.CategoryName }}
+    <button (click)="editCategory(cat)">Edit</button>
+    <button (click)="deleteCategory(cat.CategoryId)">Delete</button>
+  </li>
+</ul>
+
+<div class="see-products">
+  <button (click)="goToProducts()">See Products</button>
+</div>

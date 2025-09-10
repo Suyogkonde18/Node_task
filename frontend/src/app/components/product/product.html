@@ -1,0 +1,24 @@
+<h2>Products</h2>
+
+<form (ngSubmit)="saveProduct()">
+  <input type="text" [(ngModel)]="productName" name="productName" placeholder="Product Name" required>
+  <select [(ngModel)]="categoryId" name="categoryId" required>
+    <option [ngValue]="null" disabled>Select Category</option>
+    <option *ngFor="let cat of categories" [ngValue]="cat.CategoryId">{{ cat.CategoryName }}</option>
+  </select>
+  <button type="submit">{{ editId ? 'Update' : 'Add' }} Product</button>
+</form>
+
+<ul>
+  <li *ngFor="let prod of products">
+    {{ prod.ProductName }} ({{ prod.CategoryName }})
+    <button (click)="editProduct(prod)">Edit</button>
+    <button (click)="deleteProduct(prod.ProductId)">Delete</button>
+  </li>
+</ul>
+
+<div class="pagination">
+  <button (click)="changePage(page - 1)" [disabled]="page === 1">Previous</button>
+  <span>Page {{ page }} of {{ totalPages }}</span>
+  <button (click)="changePage(page + 1)" [disabled]="page === totalPages">Next</button>
+</div>
